@@ -1,0 +1,41 @@
+{
+  "api": "http://localhost:8080/api/v1",
+  "roles": {
+    "admin": "ROLE_ADMIN",
+    "trainer": "ROLE_TRAINER"
+  },
+  "operations": {
+    "add": "Add",
+    "update": "Update",
+    "delete": "Delete"
+  },
+  "maxStat": 255,
+  "sortByOptions": {
+    "sortDirection": {
+      "asc": "ASCENDING",
+      "desc": "DESCENDING"
+    },
+    "pokemons": {
+      "name": "name",
+      "price": "price",
+      "stats": {
+        "hp": "stats.hp",
+        "attack": "stats.attack",
+        "defense": "stats.defense",
+        "specialAttack": "stats.specialAttack",
+        "specialDefense": "stats.specialDefense",
+        "speed": "stats.speed",
+        "total": "stats.total"
+      }
+    }
+  },
+  "trainer": {
+    "pageTypes": {
+      "catchList": "catch-list",
+      "wishList": "wish-list"
+    }
+  },
+  "toast": {
+    "duration": 2500
+  }
+}

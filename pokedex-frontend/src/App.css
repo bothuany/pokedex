@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "Pokemon Solid";
+  src: local("Pokemon Solid"),
+    url("./assets/fonts/Pokemon Solid.ttf") format("truetype");
+}
+
+* {
+  word-break: break-all;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  background-color: rgb(43, 55, 68);
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(49, 130, 206);
+  border-radius: 10px;
+}
+
+.pokemon-header {
+  font-family: Pokemon Solid;
+  color: rgb(248, 204, 6);
+  font-weight: 500;
+  text-shadow: -6px -6px 3px rgb(65, 93, 171), 6px -6px 3px rgb(65, 93, 171),
+    -6px 6px 3px rgb(65, 93, 171), 6px 6px 3px rgb(65, 93, 171);
+}
+
+.pokeball:hover {
+  transform: scale(1) rotate(540deg);
+  transition: transform 0.3s ease-in-out;
+}
+@keyframes rotateBack {
+  0% {
+    transform: scale(1) rotate(540deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Apply the keyframes animation when the mouse is not hovering */
+.pokeball:not(:hover) {
+  animation: rotateBack 0.3s ease;
+}
+.gif-container img:not(:hover) {
+  animation-play-state: paused;
+}
+
+.gif-container:hover img {
+  animation-play-state: running;
+}

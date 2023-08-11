@@ -1,0 +1,27 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+
+spring:
+  jackson:
+    default-property-inclusion: non_null
+  datasource:
+    url: jdbc:mysql://localhost:3366/pokedex
+    username: root
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true
+  main:
+    banner-mode: off
+
+logging:
+  level:
+    root: info
+
